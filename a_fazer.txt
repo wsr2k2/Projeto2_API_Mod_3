@@ -1,0 +1,34 @@
+-> Nas rotas principais precisa (em todas trocar pelos nomes que o professor colocou):
+Rota Pais: falta colocar lingua mae e PIB e tirar descobrimento e area,
+Rota Estados: falta colocar região e valor salario minimo e tirar pais e area,
+Rota Cidades: colocar quantidade de bairros, tirar area.
+
+Modelo: - Paises
+     - nome
+     - população
+     - lingua mãe
+     - PIB
+
+- Estados
+     - nome
+     - região
+     - população
+     - valor salario minimo
+
+- Cidades
+     - nome
+     - quantidade de bairros
+     - população
+     - data de aniversão da cidade
+
+-> Alterar o nome das subrotas(sigam esses nomes por padrao):
+- /add
+- /update
+- /delete
+- /listall
+- /listname
+
+-> Inserir validação no update e mudar nomenclatura no add.
+-> MongoAtlas estar ok.
+-> Postar no Heroku.
+-> O README do github precisa estar totalmente preenchido e detalhado todas as rotas existentes e Colletion e Env do Thunder

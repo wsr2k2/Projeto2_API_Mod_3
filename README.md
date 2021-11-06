@@ -1,1 +1,2 @@
-# Projeto2_API_Mod_3
+# Projeto_2_Backend
+Projeto de API utilizando NodeJs e MongoDB.
