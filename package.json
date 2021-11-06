@@ -4,7 +4,7 @@
   "description": "Projeto de API utilizando NodeJs e MongoDB.",
   "main": "index.js",
   "scripts": {
-    "starts": "node",
+    "start": "node index",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +23,6 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.12",
     "nodemon": "^2.0.14"
-  }
+  },
+  "devDependencies": {}
 }
