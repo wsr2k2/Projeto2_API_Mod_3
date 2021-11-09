@@ -8,9 +8,6 @@ const Conn = require("./model/conn/index"); //importando a conexao
 
 Conn(); //executa a func de conexao
 
-const raizRouter = require("./routers/raiz.routes");
-app.use('/raiz',raizRouter);
-
 const estadosRouter = require("./routers/estados.routes");
 app.use('/estados',estadosRouter);
 
