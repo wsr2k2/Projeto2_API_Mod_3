@@ -16,20 +16,13 @@ router.get('/listAll', async (req,res) => {
   });
 });
 
-// rota para buscar uma cidade por ID
-router.get("/listId/:id", async (req,res) => {
-  try{
-      const id = req.params.id;
-      if(!req.params.id){
-          res.status(404).json({message: "Cidade não encontrada."});
-          return;
-      } else{
-      const cidade = await Cidade.findById(id);
-      res.status(200).json(cidade)
-      }
-  } catch (err) {
-      res.status(204).json({message: "Cidade não encontrada."})
-  }
+// rota para buscar uma cidade por nome.
+router.get('/list/:nome', async (req,res) => {
+  await Cidade.find({Nome: req.params.nome}).then((cidades) => {
+      res.status(200).json(cidades);
+  }).catch((err) => {
+      res.status(204).json({message:"Nada foi encontrado"});
+  });
 });
 
 // rota POST para cadastrar novas cidades === OK
