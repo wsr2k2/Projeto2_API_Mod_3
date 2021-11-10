@@ -16,7 +16,7 @@ router.get('/listAll', async (req,res) => {
   });
 });
 
-router.get('/list/:nome', async (req,res) => {
+router.get('/listName/:nome', async (req,res) => {
   await Estado.find({Nome: req.params.nome}).then((estados) => {
       res.status(200).json(estados);
   }).catch((err) => {

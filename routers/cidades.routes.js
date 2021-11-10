@@ -17,7 +17,7 @@ router.get('/listAll', async (req,res) => {
 });
 
 // rota para buscar uma cidade por nome.
-router.get('/list/:nome', async (req,res) => {
+router.get('/listName/:nome', async (req,res) => {
   await Cidade.find({Nome: req.params.nome}).then((cidades) => {
       res.status(200).json(cidades);
   }).catch((err) => {

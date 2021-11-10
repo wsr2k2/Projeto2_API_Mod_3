@@ -17,28 +17,12 @@ router.get('/listAll', async (req,res) => {
 });
 
 // rota para buscar um país por nome.
-router.get('/list/:nome', async (req,res) => {
+router.get('/listName/:nome', async (req,res) => {
   await Pais.find({Nome: req.params.nome}).then((paises) => {
       res.status(200).json(paises);
   }).catch((err) => {
       res.status(204).json({message:"Nada foi encontrado"});
   });
-});
-
-// rota para buscar um país por ID
-router.get("/listId/:id", async (req,res) => {
-  try{
-      const id = req.params.id;
-      if(!req.params.id){
-          res.status(404).json({message: "País não encontrado"});
-          return;
-      } else{
-      const pais = await Pais.findById(id);
-      res.status(200).json(pais)
-      }
-  } catch (err) {
-      res.status(204).json({message: "País não encontrado"})
-  }
 });
 
 // rota POST para cadastrar novos países === OK
