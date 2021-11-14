@@ -2,7 +2,7 @@ const express = require("express"); //import do express
 const router = express.Router(); //define app como express
 const Cidade = require("./../model/cidades"); // import do modelo cidade
 
-// Rota para raiz de Estados da API === OK
+// Rota para raiz de cidades da API === OK
 router.get("/", (req, res) => {
   res.status(200).json({ message: "Rota Cidades operante" });
 });
